@@ -1,7 +1,28 @@
 h1
 {
-    color: blue;
+    color: green;
     text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+p
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+   
+}
+p
+{
+    font-size: 16px;
+    font-style: oblique;
+    text-align: center;
+    font-size: medium;
+   
+}
+ 
+h2, h3
+{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h2
@@ -11,6 +32,69 @@ h2
     font-size: 30px;
 }
 
+h3
+{
+    color: green;
+    text-align: center;
+}
+
+/*---------------Logo and menu------------*/
+.header
+{
+    background: #00e64d;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.menu
+{
+    display: flex;
+    text-align: center;
+    list-style: none;
+}
+
+.menu li 
+{
+    padding: 15px 30px;
+    font-size: 16px;
+}
+
+.toggle
+{
+    font-size: 30px;
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    nav
+    {
+        display: block;
+        position: relative;
+        padding: 15px 20px;
+    }
+
+    .menu
+    {
+        margin-top: 15px;
+        display: none;
+    }
+
+    .menu.active, .toggle
+    {
+        display: block; 
+    }
+
+    .toggle
+    {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+
+    }
+}
 
 
 .logo
@@ -21,39 +105,213 @@ h2
     position: relative;
 
 }
+
+
+/*---------------ABOUT------------*/
+
+
 .about
 {
-    width: 50%;
+    /* width: 50%; */
     margin: 150px auto;
     text-align: center;
 }
+.mission
+{
+    width: 50%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.vision
+{
+    width: 50%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.mission h2 , .vision h2
+{
+    color: green;
+}
+
+#aboutUs
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    
+}
+
+#aboutUs div
+{
+    height: 370px;
+    width: 340px;
+    
+    margin: 10px;
+    text-align: center;
+}
+
+
+#aboutUs .moreAbout
+{
+    color: #fff;
+    background-color: #00b33c;
+}
+
+.moreAbout h2
+{
+    color: #fff;
+}
+
+#aboutUs .mission
+{
+    color: #fff;
+    background: #00b33c; 
+}
+
+.mission h2 
+{
+    color: #fff;
+}
+
+#aboutUs .vision
+{
+    background: #00b33c;
+    color: #fff;
+}
+
+.vision h2
+{
+    color: #fff;
+}
+/*---------------SERVICES-----------*/
+
+
 
 .whatWeDo
 {
-    width: 50%;
+    width: 30%;
     margin: 150px auto;
+    text-align: center;
+
+    margin: 50px auto;
+    width: 70%;
+   
+}
+
+.service
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+    
+}
+
+.dataNet
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+}
+
+.consult
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+}
+
+.cyber
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+}
+
+.services
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    
+}
+
+.services div
+{
+    height: 370px;
+    width: 340px;
+    
+    margin: 10px;
     text-align: center;
 }
 
-p
+
+/* .servies
 {
-    font-size: 16px;
-    font-style: oblique;
-    text-align: center;
-    font-size: medium;
-   
-}
+    color: #fff;
+    background-color: #00b33c;
+} */
+
 
 /*.specials
 {
     border: 3px solid #ccc;
 }*/
 
+/*-------------Services and specials------------*/
+
+/* Style the navbarigation menu */
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Style the dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #470fe2;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
 /*--------------Strategy-----------------*/
 .strategy
 {
-    background: #00171F;
-    margin: 150px auto;
+    background: #00b33c;
+    margin: 50px auto;
     width: 70%;
     min-height: 41vh;
 }
@@ -104,8 +362,8 @@ p
 
 .architecture
 {
-    background: #003459; 
-    margin: 150px auto;
+    background: #00b33c; 
+    margin: 50px auto;
     width: 70%;
     min-height: 41vh;
 }
@@ -137,8 +395,8 @@ p
 
 .implementation
 {
-    background: #007EA7;
-    margin: 150px auto;
+    background: #00b33c;
+    margin: 20px auto;
     width: 70%;
     min-height: 41vh;
 }
@@ -172,81 +430,12 @@ p
     margin-right: 15px;
 }
 
-/*--------------Values-----------------*/
-
-.values h2
-{
-    color: blue;
-}
-
-.values 
-{
-   
-    width: 50%;
-    margin: 150px auto;
-}
-
-#val
-{
-    font-size: 16px;
-    font-style: oblique;
-    font-size: small;
-}
-
-/*--------------Mission-----------------*/
-
-.mission h2
-{
-    color: blue;
-}
-
-.mission 
-{
-    text-align: center;
-    width: 50%;
-    margin: 150px auto;
-}
-
-/*--------------Vision-----------------*/
-
-.vision h2
-{
-    color: blue;
-}
-
-.vision 
-{
-    text-align: center;
-    width: 50%;
-    margin: 150px auto;
-}
-
-/*--------------Goals and objectives-----------------*/
-
-.goalsAndObjectives h2 
-{
-    color: blue;
-}
-
-.goalsAndObjectives 
-{
-    
-    width: 50%;
-    margin: 150px auto;
-}
-
-#goals
-{
-    font-size: 16px;
-    font-style: oblique;
-    font-size: small;
-}
 
 /*--------------Ownwership and Management-----------------*/
 
 .ownership h2
 {
-    color: blue;
+    color: green;
 }
 
 .ownership
@@ -263,13 +452,22 @@ p
     text-align: center;
 }
 
+/*---------------------contact-----------*/
+
+#contact
+{
+    text-align: center;
+    width: 70%;
+    margin: 50px auto;
+
+}
 .contact h2
 {
-    color: blue;
+    color: green;
 }
 
 
-.navig ul
+.navbarig ul
 {
     float: right;
 }
@@ -295,7 +493,7 @@ ul li
 {
     width: 100%;
     padding: 10px 15%;
-    background: #007EA7;
+    background: #00e64d;
     color: white;
     display: flex;
 
@@ -306,11 +504,153 @@ ul li
     text-align: center;
 }
 
-.row_1 div
+#row_1
 {
     flex-grow: 2;
 }
 
+#find
+{
+    color: green;
+}
+
+.row_2
+{
+    flex-grow: 2;
+}
+
+
+/* -------------services slider--------------- */
+/* .slider
+{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    user-select: none;
+    padding: 0 5vw;
+    width: fit-content;
+}
+
+.services
+{
+    width: 50vw;
+    height: 500px;
+    margin: 0 5vw;
+    position: relative;
+    transition: all .7s ease;
+}
+
+.services > .photo
+{
+    width: inherit;
+    height: inherit;
+    transition: all 1s ease;
+}
+
+.services > .photo > img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.services > .data
+{
+    position: relative;
+    bottom: 20%;
+    right: -50px;
+    color:black;
+    transition: all .4s ease;
+}
+
+.services > .data h3
+{
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.services > .data p
+{
+    font-size: 1.2rem;
+    margin-top: .5rem;
+}
+
+/* ----------slide numbers ------------ 
+.services .photo::before
+{
+    content: '';
+    position: absolute;
+    color: #fff;
+    transform: rotate(-90deg);
+    top: 40px;
+    left: -60px;
+}
+
+.services:nth-child(1) .photo::before
+{
+    content: '01 ____ 04';
+}
+.services:nth-child(2) .photo::before
+{
+    content: '02 ____ 04';
+}
+.services:nth-child(3) .photo::before
+{
+    content: '03 ____ 04';
+}
+.services:nth-child(4) .photo::before
+{
+    content: '04 ____ 04';
+}
+
+
+/* --------press animation-------- 
+.services:active
+{
+    cursor: grabbing;
+}
+.slider:active .services
+{
+    transform: scale(0.9);
+    margin: 0.0;
+}
+.slider:active .services .text
+{
+    transform: translateX(-40%);
+} */
+
+
+
+.slider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    margin-left: 250px;
+  }
+  
+  .services {
+    display: none;
+  }
+  
+  .services.active {
+    display: block;
+  }
+  
+  .services {
+    width: 100%;
+    float: left;
+  }
+  
+  .photo {
+    float: left;
+    width: 40%;
+  }
+  
+  .data {
+    float: left;
+    width: 60%;
+  }
+  
 /*#slider
 {
     margin: 0 auto;
