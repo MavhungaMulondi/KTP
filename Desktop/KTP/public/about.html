@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+   <!-- pages -->
+   <link rel="stylesheet" href="style.css">
+
+   <!-- links -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+   integrity="sha384-MCw98/SFnGRAYqLRwfYkcVyDG3iUWKNsrQhD6GzV5JEQFmWnJv" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+  <div class="header">
+    <nav>
+      <div class="logo">
+      <img src="images/Kalauba final logo.png" alt="OOPS picture not found " class="logo">
+      </div>
+
+      <ul id="menuList">
+          <li><a href="start.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="special.html">Special</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-icon">
+          <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
+  </nav>  
+  </div>
+
+    <div class="about"  id="aboutUs" style="background-image: url(images/implemen.png)" style="padding: 0 5px;">
+       
+        <div class="moreAbout">
+        <!-- <div class="moving-box"> -->
+          <h2> About Us </h2>
+          <p>Kalauba Trading and Projects is a 100% black woman owned company and
+            is an innovative brand founded to provide IT and  Telecommunocations
+            services and solutions that are meant to assist our customers  
+            to provide simple and effective products to the end user.  
+            Kalauba Trading AND Projects Consulting is committed to developing middleware solutions to  
+            help customers intergrate their traditional systems and achieve an intergrated  
+            network which will produce results in a more real-time and automatic manner. </p>
+    
+        </div>
+       
+              
+      <div class="mission" style="padding: 0 5px ">
+        <h2>Mission</h2>
+        <p>To be a service provider in this day in age that 
+          delivers the right service, at the right price and 
+          making a profit. By providing our customers with 
+          business solutions that will help them run their 
+          businesses with the highest level of agility, simplicity
+          and efficiency.</p>
+      </div>
+    
+      <div class="vision">
+        <h2>Vision</h2>
+        <p>Kalauba Trading and Projects Consulting seeks to be
+           the primary driver of new technological solutions in
+           Africa and to enhance the way business is done in 
+           technologically underprivileged countries of our 
+           continent.</p>
+      </div>
+    
+      </div>
+
+      <!-- --------------------scripts-------------------------- -->
+    <script>
+      let menuList = document.getElementById("menuList")
+      menuList.style.maxHeight = "0px";
+
+      function toggleMenu(){
+          if(menuList.style.maxHeight == "0px")
+          {
+              menuList.style.maxHeight = "300px";
+          }
+          else{
+              menuList.style.maxHeight = "0px";
+          }
+      }     
+  </script>
+  <script src="script.js"></script>
+        
+</body>
+</html>

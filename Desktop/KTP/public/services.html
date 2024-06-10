@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+
+ <!-- pages -->
+ <link rel="stylesheet" href="style.css">
+
+ <!-- links -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+ integrity="sha384-MCw98/SFnGRAYqLRwfYkcVyDG3iUWKNsrQhD6GzV5JEQFmWnJv" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+ <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+ 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+  <div class="header">
+    <nav>
+      <div class="logo">
+      <img src="images/Kalauba final logo.png" alt="OOPS picture not found " class="logo">
+      </div>
+
+      <ul id="menuList">
+          <li><a href="start.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="special.html">Special</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-icon">
+          <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
+  </nav>  
+  </div>
+    <h1>Services</h1>
+    <div class=whatWeDo>
+        <div class="service">
+          
+          <img src="images/pexels-brett-sayles-5480781.jpg" alt="OOPS picture not found " class="logo" draggable="false">
+         
+          <div class="data-set">
+            <h3>Data Center</h3>
+        <p>
+          Kalauba Trading and Projects will offer data center services
+          and solutions in accordance with the needs of the client and,
+          if necessary,roadmaps in accordance with current data center
+          standards.
+          Cloud Computing is taking over and we are the best company 
+          to providr tools and solutions in private, public, hybrid
+          and/or community cloud.
+          
+          We offer:
+        </p>
+        <ol>
+         <li class="list">Cloud data Center Management </li>
+           <li class="moreData">To ensure the highest level of performance and compliance</li>
+         <li class="list">Data Center Virtualization</li>
+           <li class="moreData">Oversee both public and private cloud services with on-premises infrastructure.</li>
+         <!-- <li class="list"></li> -->
+        </ol>
+          </div> 
+      </div>
+  
+      <div class="dataNet">
+        
+        <img src="images/pexels-brett-sayles-4716292.jpg" alt="OOPS picture not found " class="logo"  draggable="false">
+        
+        <div class="data-set">
+          <h3>Data Networks and Cabling</h3>
+          <p>
+            Organizations and companies now have the chance to send data,
+             video, and voice via a single medium, thanks to network 
+             convergence. We will offer solutions that are tailored and 
+             in line with the needs of our clients. The services that we 
+             offer are:
+          </p>
+          <ol class="list">
+         <li>Structured Cabling Installation</li>
+         <li>Network Design and Planning</li>
+         <li>Cable Management</li>
+         <li>Network Equipment Installation</li>
+         <li>Network Maintenance and Troubleshooting</li>
+       </ol>
+        </div> 
+        
+    </div>
+  
+    <div class="consult">
+      
+      <img src="images/pexels-fauxels-3183197.jpg" alt="OOPS picture not found " class="logo"  draggable="false">
+      
+      <div class="data-set">
+        <h3>Consulting and Managed services</h3>
+        <p>
+          For our clients, we offer managed solutions and consulting services
+           that are provided in accordance with a service level agreement.
+         We offer serices such as :
+         <ol class="list">
+         <li>Marketing and Sales Consulting</li>
+         <li>Technology Consulting</li>
+         <li>Strategy Consulting</li>
+         <li>Network Managed Services</li>
+         <li>Application Managed Services</li>
+       </ol>
+         </p>
+  </div>
+  </div>
+  
+  
+  <div class="cyber">
+  
+    <img src="images/cybersecurity.jpg" alt="OOPS picture not found " class="logo" draggable="false">
+
+    <div class="data-set">
+      <h3>Cybersecurity</h3>
+      <p>
+       Kalauba Trading and Projects is best placed to look at strategies 
+       and solutions to best meet the requirements.
+       We offer:
+
+       <ol class="list">
+         <li>Risk Assessment and Management</li>
+         <li>Endpoint Security</li>
+         <li>Network Security</li>
+         <li>Security Consulting:</li>
+       </ol>
+
+      </p>
+    </div> 
+  </div>
+
+  <div class="hardware">
+      
+   <img src="images/laptops.jpg" alt="OOPS picture not found " class="logo"  draggable="false">
+   
+   <div class="data-set">
+     <h3>Hardware and software</h3>
+     <p>
+       We supply IT hardware and software such as :
+       <ol class="list">
+         <li>Desktops and Laptops</li>
+         <li>Printers</li>
+         <li>Projectors</li>
+         <li>Switches</li>
+         <li>Keyboards and mouse</li>
+         <li>Web and App development</li>
+       </ol>
+     </p>
+</div>
+</div>
+  </div>
+
+  <!-- --------------------scripts-------------------------- -->
+<script>
+  let menuList = document.getElementById("menuList")
+  menuList.style.maxHeight = "0px";
+
+  function toggleMenu(){
+      if(menuList.style.maxHeight == "0px")
+      {
+          menuList.style.maxHeight = "300px";
+      }
+      else{
+          menuList.style.maxHeight = "0px";
+      }
+  }     
+</script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,727 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* -------------------headings and paragraphs---------- */
+h1,h2
+{
+    color: #00b33c;
+    text-align: center;
+}
+
+/* h1, h2, h3, h4, h5, h6 
+{
+    margin-bottom: 20px; /* Space below headings */
+    /* font-size: 45px; */
+/* } */
+p
+{
+    font-size: 16px;
+}
+/* --------------header--------------- */
+.header
+{
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    padding: 10px 0;
+    justify-content: space-around;
+    background: rgba(252, 252, 252, 1) !important;
+    width: 100%;
+}
+
+/* ------------------navigation bar and menu------------------ */
+nav{
+    padding: 10px 30px;
+    display: flex;
+    /* position: fixed; */
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(252, 252, 252, 1) !important;
+    height: 90px;
+}
+
+nav ul{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav ul li a:hover
+{
+    text-decoration: underline;
+}
+
+.menu-icon{
+    display: none;
+}
+
+.menu-icon i{
+    color: black;
+    font-size: 30px;
+}
+
+@media (max-width:600px) {
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: #00b33c;
+        gap: 0;
+        overflow: hidden;
+    }
+    nav ul li{
+        padding: 20px;
+        padding-top: 0;
+    }
+    .menu-icon{
+        display: block;
+    }
+    #menuList{
+        transition: all 0.5s;
+    }
+}
+/* ------------------------------------------------ */
+
+/* ---------------------logo-------------------------- */
+.logo
+{
+    width: 200px;
+    height: 70px; 
+    position: relative;
+    max-width: 100%;
+}
+/* ---------------------------------------------------- */
+
+/* --------------------motto --------------------- */
+.welcome
+  {
+      font-size: 50px;
+      margin-top: 150px;
+      white-space: nowrap;
+      overflow: hidden;
+      box-sizing: border-box;
+  }
+.welcome span 
+  {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll 12s linear infinite;
+      font-size: 50px;
+      font-weight: bold;
+      color: #fff;
+  }
+  @keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+/* ------------------------------------------- */
+
+/* -------------------about--------------------- */
+.about
+{
+    margin: 150px auto;
+    text-align: center;
+    overflow: hidden;
+
+}
+.moreAbout
+{
+    padding: 10px;
+    margin: 5px 0; 
+    width: 50%;
+    opacity: 0; 
+    transform: translateX(1600px); 
+    animation: slideIn 1s ease forwards; 
+    background: #00b33c;
+    color: #fff;
+}
+.moreAbout h2, .vision h2
+{
+    color: #fff;
+}
+
+.mission
+{
+    width: 50%;
+    margin: 50px auto;
+    text-align: center;
+    transform: translateX(1600px);
+    animation: slideIn 1s ease forwards;
+    background:#fff;
+}
+.vision
+{
+    width: 50%;
+    margin: 50px auto;
+    text-align: center;
+    transform: translateX(1600px);
+    background: #00b33c;
+    color: #fff;
+    animation: slideIn 1s ease forwards;
+}
+
+.mission h2 
+{
+    color: green;
+}
+
+#aboutUs
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    
+}
+
+#aboutUs div
+{
+    height: 370px;
+    width: 340px;
+    
+    margin: 10px;
+    text-align: center;
+}
+
+
+/* Define keyframes for the slideIn animation */
+/* slide from right to left */
+@keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+.moreAbout:nth-child(1) {
+    animation-delay: 0s; /* No delay for the first child */
+}
+
+.mission:nth-child(2) {
+    animation-delay: 0.6s; /* 0.3s delay for the second child */
+}
+
+.vision:nth-child(3) {
+    animation-delay: 0.9s; /* 0.6s delay for the third child */
+}
+/* ----------------------------------------------- */
+
+/* --------------start-services--------------------------- */
+/* ---------------services slider--------- */
+
+.txt p a 
+{
+    color: #00b33c;
+}
+
+.slider{
+	position: relative;
+	width: 100%;
+    padding: 20px 0;
+}
+.myslide{
+	height: 555px;
+	display: none;
+	overflow: hidden;
+}
+.prev, .next{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 50px;
+	padding: 15px;
+	cursor: pointer;
+	color: green;
+	transition: 0.1s;
+	user-select: none;
+}
+.prev:hover, .next:hover{
+	color: #00a7ff; /* blue */
+}
+.next{
+	right: 0;
+}
+.dotsbox{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 25px;
+	cursor: pointer;
+    bottom: 5%;
+}
+.dot{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 3px solid black;
+	border-radius: 50%;
+	margin: 0 10px;
+	cursor: pointer;
+}
+
+
+/* javascript */
+.active, .dot:hover{
+	border-color: #00b33c;  
+}
+/* muslide add fade */
+ .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+ @-webkit-keyframes fade {
+    from {opacity: 0.8}
+    to {opacity: 1}
+  }
+  @keyframes fade {
+    from {opacity: 0.8}
+    to {opacity: 1}
+  }
+  .txt{
+	position: absolute;
+	color: #fff;
+	letter-spacing: 2px;
+	line-height: 35px;
+	top: 40%;
+	left: 10%;
+    right: 10%;
+	-webkit-animation-name: posi;
+  	-webkit-animation-duration: 2s;
+  	animation-name: posi;
+  	animation-duration: 2s;
+	z-index: 1;
+}
+@-webkit-keyframes posi {
+    from {left: 25%;}
+    to {left: 15%;}
+  }
+  @keyframes posi {
+    from {left: 25%;}
+    to {left: 15%;}
+  }
+  .txt h1{
+	color: #00b33c;  
+	 font-size: 50px;
+	margin-bottom: 20px;
+    text-align: left;
+    }
+    .txt p{
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+.myslide img{
+	transform: scale(1.5, 1.5);
+	-webkit-animation-name: zoomin;
+  	-webkit-animation-duration: 40s;
+  	animation-name: zoomin;
+  	animation-duration: 40s;
+}
+@-webkit-keyframes zoomin {
+    from {transform: scale(1, 1);}
+    to {transform: scale(1.5, 1.5);}
+  }
+  @keyframes zoomin {
+    from {transform: scale(1, 1);}
+    to {transform: scale(1.5, 1.5);}
+  }
+
+  @media screen and (max-width: 800px){
+	.myslide{
+		height: 500px;
+	}
+	.txt{
+		letter-spacing: 2px;
+		line-height: 25px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-animation-name: posi2;
+		-webkit-animation-duration: 2s;
+		animation-name: posi2;
+		animation-duration: 2s;
+	}
+
+	@-webkit-keyframes posi2 {
+	  from {top: 35%;}
+	  to {top: 50%;}
+	}
+
+
+	@keyframes posi2 {
+	  from {top: 35%;}
+	  to {top: 50%;}
+	}
+
+	.txt h1{
+		font-size: 40px;
+	}
+	.txt p{
+		font-size: 13px;
+	}
+
+}
+
+@media screen and (max-width: 520px){
+	.txt h1{
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+ }
+
+ /* ------------services-services------------- */
+ .whatWeDo
+ {
+    margin-top: 150px;
+ }
+
+ /* ----------------specials---------------- */
+ .specials
+ {
+    background-size: 1550px;
+    margin-top: 120px;
+ }
+ .specials h3
+{
+    color: #00b33c;
+    text-align: center ;
+}
+ /*--------------Strategy-----------------*/
+.strategy
+{
+    background: #00b33c;
+    margin: 50px auto;
+    width: 70%;
+    min-height: 41vh;  
+}
+#strategy-content, #strategy-content h2
+{
+    color: white;
+}
+.strategy img
+{
+    width: 350px;
+    height: 300px; 
+    float: left;
+    margin-right: 15px;
+    max-width: 100%;
+    position: relative;
+
+}
+/*--------------Architecture-----------------*/
+.architecture h2 
+{
+    color: green;
+}
+.architecture
+{
+    /* background: #00b33c;  */
+    background: rgba(252, 252, 252, 1);
+    margin: 50px auto;
+    width: 70%;
+    min-height: 41vh;
+    
+}
+/* #arch-content
+{
+    color: black;
+} */
+.architecture img
+{
+    width: 350px;
+    height: 300px; 
+    float: left;
+    margin-right: 15px;
+    max-width: 100%;
+    position: relative;
+}
+/*--------------Implememntation-----------------*/
+.implementation
+{
+    background: #00b33c;
+    margin: 20px auto;
+    width: 70%;
+    min-height: 40.4vh;
+}
+#implement-content, #implement-content h2
+{
+    color: white;
+}
+.implementation img
+{
+    width: 350px;
+    height: 300px; 
+    float: left;
+    margin-right: 15px;
+    max-width: 100%;
+    position: relative;
+}
+
+/* -------------------contact-start------------------ */
+#contact
+{
+    text-align: center;
+    width: 70%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+.contact h2
+{
+    color: green;
+}
+.navbarig ul
+{
+    float: right;
+}
+ul li
+{
+  /*text-align: right;  */
+  list-style-type: none;
+  display: inline-block;
+  padding: 5px;
+  margin-left: 20px;
+}
+.row_1 p
+{
+    text-align: left;
+}
+.row h4, #row_1 h5, .row_2 h5
+{
+    font-size: 15px;
+}
+.container
+{
+    width: 100%;
+    padding: 10px 15%;
+    background: #00b33c;
+    color: white;
+    display: flex;
+}
+.container div
+{
+    text-align: center;
+}
+#row_1
+{
+    flex-grow: 2;
+}
+#find
+{
+    color: green;
+}
+.row_2
+{
+    flex-grow: 2;
+}
+
+/* --------------service services---------------------- */
+.service
+{
+    background: #00b33c;
+    margin: 50px auto;
+    width: 70%;
+    min-height: 35vh;  
+}
+
+.service img
+{
+    width: 250px;
+    height: 250px; 
+    float: left;
+    margin-right: 25px;
+    max-width: 100%;
+    position: relative;
+
+}
+.service .data-set, .service h3
+{
+    color: #fff;
+}
+
+.dataNet
+{
+    margin: 50px auto;
+    width: 70%;
+    min-height: 40.4vh;
+}
+
+.dataNet img
+{
+     width: 250px;
+    height: 250px; 
+    float: left;
+    margin-right: 25px;
+    max-width: 100%;
+    position: relative;
+}
+
+.consult h2
+{
+    color: #fff;
+}
+
+.consult
+{
+    background: #00b33c;
+    margin: 50px auto;
+    width: 70%;
+    min-height: 35vh;  
+}
+.consult img
+{
+   width: 250px;
+    height: 250px; 
+    float: left;
+    margin-right: 25px;
+    max-width: 100%;
+    position: relative;
+}
+
+.consult .data-set, .consult h3
+{
+    color: #fff;
+}
+
+.cyber
+{
+    margin: 20px auto;
+    width: 70%;
+    min-height: 40.4vh;
+}
+.cyber img
+{
+    width: 250px;
+    height: 250px; 
+    float: left;
+    margin-right: 25px;
+    max-width: 100%;
+    position: relative;
+}
+.hardware h3
+{
+    color: #fff;
+}
+.hardware
+{
+    background: #00b33c;
+    color: #fff;
+    margin: 20px auto;
+    width: 70%;
+    min-height: 33.7vh;
+}
+.hardware img
+{
+    width: 250px;
+    height: 250px; 
+    float: left;
+    margin-right: 25px;
+    max-width: 100%;
+    position: relative;
+}
+.list{
+    list-style-type: square;
+    
+}
+.moreData 
+{
+    list-style-type: circle ;
+}
+
+
+/* -------------------contact-contact-live-------------- */
+.contact-container 
+{
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 100px;
+    text-align: center;  
+    /* display: flex;   */
+}
+
+.contact-card 
+{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.info 
+{
+    margin: 10px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+#phone 
+{
+    animation-delay: 0.5s;
+}
+
+#email 
+{
+    animation-delay: 1s;
+}
+
+#address 
+{
+    animation-delay: 2s;
+}
+
+#address2
+{
+    animation-delay: 2.5s;
+}
+
+#facebook
+{
+    animation-delay: 3s;
+}
+
+#twitter
+{
+    animation-delay: 3.5s;
+}
+
+#linkedin
+{
+    animation-delay: 4s;
+}
+
+@keyframes fadeInUp 
+{
+    to 
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
