@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+
+<!-- -----------------------links--------------- -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- -------------------pages--------------- -->
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <nav>
+          <div class="logo">
+          <img src="images/LOGO.jpg" alt="OOPS picture not found " class="logo" draggable="false">
+          </div>
+          
+          <ul id="menuList">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <!-- <li><a href="portfolio.html">PORTFOLIO</a></li> -->
+            
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+          </ul>
+          <div class="menu-icon">
+              <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+          </div>
+      </nav>  
+      </div>
+
+    <!-- <h1>About us</h1> -->
+
+    <!-- --------------------services slider------------------- -->
+<div class="slider">
+    <h1>Services</h1>
+    <!-- fade css -->
+    <div class="myslide custom-fade" style="display: block;">
+        <div class="txt">
+        <h1>Pride</h1>
+            <p>
+              We deliver quality services and products
+              <!-- <p><a href="services.html">Read more....</a></p> -->
+            </p>
+        </div>
+        <img src="images/back_1.png" alt="OOPS picture not found " class="logo" draggable="false"
+        style="width: 100%; height: 100%; ">
+    </div>
+    
+    <div class="myslide custom-fade">
+        <div class="txt">
+        <h1>Respect</h1>
+            <p>
+              Professional and ethical conduct
+               <!-- <p><a href="services.html">Read more....</a></p> -->
+            </p>
+        </div>
+        <img src="images/back_1.png" alt="OOPS picture not found " class="logo"  draggable="false"
+         style="width: 100%; height: 100%;">
+    </div>
+    
+    <div class="myslide custom-fade">
+        <div class="txt">
+    <h1>Passion</h1>
+      <p>
+        Personal commitment and dedication
+      </p>
+      <!-- <p><a href="services.html">Read more....</a></p> -->
+        </div>
+        <img src="images/back_1.png" alt="OOPS picture not found " class="logo"  draggable="false"
+         style="width: 100%; height: 100%;">
+    </div>
+    
+    
+    <!-- /fade css -->
+    
+    <!-- onclick js -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    <div class="dotsbox" style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+
+    </div>
+    <!-- /onclick js -->
+</div>
+
+<div class="mission">
+  <h1><span>VISION</span></h1>
+  <p>To be a universal market leader in the management and execution of all 
+    development initiatives.</p>
+
+  <h1>MISSION</h1>
+  <p>To provide quality, excellent service that exceeds the expectations of our 
+    esteemed clientele and to create value to the diverse population needs in South Africa and 
+    beyond</p>
+</div>
+
+<!-- -------------------scripts------------------ -->
+<script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+
+<script src="script.js"></script>   
+</body>
+</html>
